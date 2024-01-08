@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PalindromeCheckerTest {
 
     public static boolean isPalindrome(String word) {
-        // Remove spaces and convert to lowercase for case-insensitive comparison
         String cleanWord = word.replaceAll("\\s", "").toLowerCase();
 
         int length = cleanWord.length();
@@ -26,7 +25,7 @@ public class PalindromeCheckerTest {
         assertFalse(isPalindrome("world"));
         assertFalse(isPalindrome("Palindrome"));
         
-        assertTrue(isPalindrome("")); // Empty string is considered a palindrome
+        assertTrue(isPalindrome(""));
     }
 
     public static void main(String[] args) {
